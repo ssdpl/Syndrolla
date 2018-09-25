@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Syndrolla</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--<link rel="stylesheet" type="text/css" href="diamonds.css">-->
+		<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="row clearfix">
+					<h1 class="logo">Syndrolla</h1>
+					<ul class="main-nav animated slideInDown" id="check-class">
+					<li><a href="index.html">home</a></li>
+					<li><a href="portifolio.html">portifolio</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact us</a></li>
+					</ul>
+					<a href="#" class="mobile-icon" onclick="slideshow()"><i class="fa fa-bars"></i></a>
+				</div>
+			</nav>
+		</header>
+		<!--//////////////////////////////header ends here/////////////////////////////////-->
+		<div class="portifolio-section">
+			<div class="description">
+				<h1 class="p1">What we do</h1>
+				<span class="border"></span>
+				<p>
+					Syndrolla Software Developers Private Limited is an unlisted private company incorporated on 28 August, 2018. The registered office of the company is at C/o Anupama Katoch , D/o Harnam Singh Ward No-2 VPO -Rajehar, Tehsil- Palampur, PALAMPUR, Kangra, Himachal Pradesh.
+					The total paid-up capital is INR 20,000.00 . The company has no reported secured loans.
+					Details of its last annual general meeting are not available. The company is yet to submit its first full-year financial statements to the registrar.
+				</p>
+			</div>
+		</div>
+<div class="row">
+	<h1 class="p1">Services</h1>
+	<span class="border"></span>
+<div class="column">
+<img src="i7.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+
+<h3>Android Development</h3>
+<p>Syndrolla Software Developers Private Limited is an unlisted private company incorporated on 28 August, 2018. The registered office
+of the company is at C/o Anupama</p>
+
+</div>
+<div class="column">
+<img src="i4.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+<h3>ios Development</h3>
+<p>Syndrolla Software Developers Private Limited is an unlisted private company incorporated on 28 August, 2018. The registered office
+of the company is at C/o Anupama</p>
+</div>
+<div class="column">
+<img src="i5.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+<h3>Web Development</h3>
+<p>Syndrolla Software Developers Private Limited is an unlisted private company incorporated on 28 August, 2018. The registered office
+of the company is at C/o Anupama</p>
+</div>
+<div class="column">
+<img src="i3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+<h3>Web design</h3>
+<p>Syndrolla Software Developers Private Limited is an unlisted private company incorporated on 28 August, 2018. The registered office
+of the company is at C/o Anupama</p>
+</div>
+</div>
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+<div class="mySlides">
+<div class="numbertext">1 / 4</div>
+<img src="download.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+<div class="numbertext">2 / 4</div>
+<img src="download.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+<div class="numbertext">3 / 4</div>
+<img src="download.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+<div class="numbertext">4 / 4</div>
+<img src="download.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+<div class="column">
+<img class="demo cursor" src="download.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+</div>
+<div class="column">
+<img class="demo cursor" src="download.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+</div>
+<div class="column">
+<img class="demo cursor" src="download.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+</div>
+<div class="column">
+<img class="demo cursor" src="download.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+</div>
+</div>
+</div>
+<script>
+function openModal() {
+document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+document.getElementById('myModal').style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

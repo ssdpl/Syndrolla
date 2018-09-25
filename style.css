@@ -1,0 +1,586 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body{
+	font-family: 20px;
+	overflow-x: hidden;
+	color: white;
+	font-family: 'Flamenco', cursive;
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("http://i65.tinypic.com/2z70945.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+
+}
+
+.logo{
+	height: 120px;
+	width: auto;
+	float: left;
+	margin-top: 50px;
+	color: #fff;
+}
+
+.main-nav{
+	float: right; 
+	margin-top: 60px;
+
+}
+
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+}
+
+.main-nav li a{
+	padding: 5px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	font-weight: 100;
+}
+
+.main-nav li a:hover{
+	border-bottom: 2px solid #bf55ec;
+}
+
+.main-content-header{
+	width: 1180px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+h2{
+	color: #ff;
+	font-size: 240%;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.colorchange{
+	animation: colorchangeSyndrolla 1s infinite;
+}
+
+@keyframes colorchangeSyndrolla{
+	0%{color: red;}
+	25%{color: #bf55ec;}
+	50%{color: white;}
+	100%{color: #bf55ec;}
+}
+
+.mobile-icon{display: none;}
+
+
+/*//////////Responsive queries////////////*/
+
+@media only screen and (max-width: 1180px){
+	.main-content-header{
+		width: 100%;
+		padding: 0 2%;
+	}
+}
+
+@media only screen and (max-width: 998px){
+	h2{
+		font-size: 200%;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	h2{font-size: 180%;}
+
+	.main-nav{
+		display: none;
+	}
+	.mobile-icon{
+		display: inline-block;
+		color: #fff;
+		float: right;
+		margin-top: 30px;
+		margin-right: 20px;
+	}
+
+	.main-nav{float: left;}
+
+	.main-nav li{
+		display: block;
+		margin-top: 10px;
+	}
+
+}
+
+@media only screen and (max-width: 400px){
+	h2{font-size: 160%}
+}
+
+
+
+
+/*///////////////////Contact us//////////////////////*/
+
+
+.contact-form{
+	width: 85%;
+	max-width:600px;
+	background: transparent;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 30px 40px;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow:  0 0 20 #000000b3;
+	font-family: "Montserrat", sans-serif;
+}
+
+.contact-form h1{
+	margin-top: 0;
+	font-weight: 200;
+
+}
+
+.txtb{
+	border-bottom: 1px solid #bf55ec;
+	margin: 8px 0;
+	padding: 12px 18px;
+}
+
+.txtb label{
+	display: block;
+	text-align: left;
+	color: #33;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.txtb input,.txtb textarea{
+	width: 100%;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 18px;
+	margin-top: 6px;
+}
+
+.btn{
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: lighter;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 8px;
+	transition: background-color 0.2s, border 0.2s, color 0.2;
+	cursor: pointer;
+	width: 100%;
+	margin-top: 8px;
+}
+
+.btn-full{
+	background-color: transparent;
+	color: #bf55ec;
+	border: 1px solid #bf55ec;
+}
+
+.btn-full:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.txtb textarea:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.txtb input[type=text]:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.txtb input[type=email]:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*//////////////////////////////////////About Us/////////////////////////////////////////////////////*/
+
+.about-heading{
+	color: #853ba5;
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-size: 40px;
+	margin: 20px;
+	padding: 0px;
+}
+
+.border{
+	display: block;
+	background-color: #956997;
+	height: 2px;
+	width: 200px;
+	margin: 20px;
+	padding: 0px;
+}
+
+p{
+	font-size: 20px;
+	margin: 20px;
+	padding: 0px;
+	font-family: 'Quicksand';
+}
+
+.about-heading:hover{
+	font-size: 45px;
+	background-color: rgb(191, 85, 236, 0.3);
+	color: #fff;
+	padding: 4px;
+	max-width: 1180;
+	-moz-box-shadow: 1px 1px 3px 2px #bf55ec;
+	-webkit--box-shadow: 1px 1px 3px 2px #bf55ec;
+	box-shadow: 1px 1px 3px 2px #bf55ec;
+}
+
+
+.team-section{
+	overflow: hidden;
+	text-align: center;
+	background: #34485e;
+	padding: 60px;
+}
+
+.team-section h1{
+	text-transform: uppercase;
+	margin-bottom: 60px;
+	color: #fff;
+	font-size: 40px;
+}
+
+.border-about{
+	display: block;
+	margin: auto;
+	width: 160px;
+	height: 3px;
+	background: #3498db;
+	margin-bottom: 40px;	
+}
+
+.ps{
+	margin-bottom: 40px;
+}
+
+.ps a{
+	display: inline-block;
+	margin: 0 30px;
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	border-radius: 50%
+}
+
+.ps a img{
+	width: 100%;
+	filter: grayscale(100%);
+	transition: 0.4s all;
+}
+
+.ps a:hover > img{
+	filter: none;
+}
+
+.section{
+	width: 600px;
+	margin: auto;
+	font-size: 20px;
+	color: #fff;
+	text-align: justify;
+	height: 0;
+	overflow: hidden;
+}
+.section:target{
+	height: auto;
+}
+
+.name{
+	display: block;
+	margin-bottom: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+
+/*////////////////////////////////////portifolio-section////////////////////////////////////////////////*/
+
+.p1{
+	margin: 20px;
+	padding: 0px;
+	font-family: 'Montserrat';
+	font-weight: lighter;
+	text-transform: uppercase;
+	font-size: 180%;
+}
+
+.container{
+	width: 1280px;
+	margin: 70px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-grow: wrap;
+}
+
+.container .box{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #ff0;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.container .box .imgBox{
+	position: relative;
+	overflow: hidden;
+}
+
+.container .box .imgBox img{
+	max-width: 100%;
+	transition: transform 2s;
+}
+
+.container .box:hover .imgBox img{
+	transform: scale(1.2);
+}
+
+
+.container .box .details{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0, 0, 0, .8);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+
+.container .box:hover .details{
+	transform: scaleY(1);
+}
+
+.container .box .details .contents{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #fff;
+}
+
+.container .box .details .contents h3{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #ff0;
+}
+
+.container .box .details .contents p{
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2{
+  margin: auto;
+  padding: 20px;	
+
+}
+
+h3{
+  color: #ff0;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
